@@ -24,17 +24,31 @@
     <main>
         <h2>¿Quienes somos?</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ut in, odio similique exercitationem error accusamus magnam facilis consequuntur molestiae consectetur, laudantium voluptates libero corporis? Sint obcaecati facilis error consequuntur!</p>
-        <div>
+        <form>
             <h3>Contáctanos y cuéntanos tu experiencia</h3>
             <label for="name">¿Quien Eres?</label>
             <input type="text" id="name" name="name" placeholder="Nombre y Apellido" required>
             <label for="answer">¿Quieres una respuesta?</label>
             <input type="email" id="answer" name="answer" placeholder="e-mail">
             <label for="motive">Motivo del contacto:</label>
-            <textarea name="motive" id="motive" maxlength="500" required></textarea>
+            <textarea name="motive" id="motive" maxlength="500" rows="3" required></textarea>
             <button type="submit">Enviar</button>
             <button type="button">Encuesta voluntaria</button>
-        </div>
+        </form>
+        <form>
+            <label for="variety">Variedad de especies en la aplicación</label>
+            1<input type="range" value="0" name="variety" id="variety" step="10" disabled>10
+            <label for="easy">Facilidad de uso de al aplicación</label>
+            1<input type="range" value="0" name="easy" id="easy" step="10" disabled>10
+            <button type="submit"></button>
+            <label for="publi">¿Cómo nos has conocido?</label>
+            <select name="publi" id="publi" disabled>
+                <option value="">Elije Una</option>
+                <option>Navegando por la web</option>
+                <option>Por recomendación</option>
+                <option>Por la publicidad</option>
+            </select>
+        </form>
     </main>
     <footer>
         <div class="faq">

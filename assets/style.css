@@ -97,7 +97,7 @@ main .logg{
     margin: 1rem 25%;
     padding: 0.5rem;
 }
-.logg button{
+button{
     background-color: var(--primary);
     margin: 1rem;
     padding: 0.2rem;
@@ -105,7 +105,7 @@ main .logg{
     box-shadow:inset ;
     transition: 0.2s;
 }
-.logg button:hover{
+button:hover{
     background-color: var(--terciary);
 }
 .logg #eyeBan{
@@ -182,6 +182,10 @@ footer .rrss{
 }
 #species:checked{
     opacity: 1;
+    background-image: url();
+}
+#species:hover{
+    opacity: 1;
 }
 #species img{
     background-color: aliceblue;
@@ -191,9 +195,6 @@ footer .rrss{
     cursor: pointer;
     border-radius: 2rem;
     transition: 1s;
-}
-#species img:hover{
-    height: 12rem;
 }
 #species p{
     width: 100%;
