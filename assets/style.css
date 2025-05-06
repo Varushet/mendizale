@@ -143,10 +143,13 @@ footer .faq{
     width: 70%;
     overflow: scroll;
 }
-
+.faq details{
+    cursor: pointer;
+    border-radius: 20%;
+    transition: 0.5s;
+}
 .faq details p{
     font-size: 0.8rem;
-    color: wheat;
 }
 footer .logo{
     margin: 1rem 1rem;
@@ -209,3 +212,43 @@ footer .rrss{
     display: none;
 }
 
+
+@media screen and (min-width: 900px) {
+    h1{
+        font-size: 5rem;
+        text-align: left;
+        width: 100%;
+    }
+    main .logg form{
+        margin: 0 auto;
+    }
+    .logg #eyeBan{
+        right: 50rem;
+    }
+    main p{
+        width: 35rem;   
+        margin: 0 auto;
+    }
+    main .us{
+        width: 35rem;
+        margin: 0 auto;
+    }
+    .catalog{
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(6, 1fr);
+    }
+    .catalog button{
+        height: 4rem;
+        grid-column: 2/6;
+    }
+    footer .rrss{
+        align-items: center;
+        width: 20%;
+        margin: 0 auto;
+    }
+    footer .faq{
+        height: 100%;
+        width: 45%;
+        overflow: scroll;
+    }
+}
