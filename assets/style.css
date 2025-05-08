@@ -64,8 +64,13 @@ nav{
     width: 100%;
     padding: 0.5rem 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: right;
     border-top: 1px solid  black;
+}
+#date{
+    font-size: 1.2rem;
+    width: 100%;
 }
 nav a{
     padding: 0.2rem;
@@ -175,22 +180,25 @@ footer .rrss{
     margin: 1rem auto;
     grid-column: 1/3;
 }
-#species{
+form div{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
     margin: 0.2rem;
     background-color: wheat;
     border-radius: 2rem;
     display: flex;
     flex-wrap: wrap;
-    opacity: 0.8;
+    opacity: 0.7;
 }
-#species:checked{
+form div:checked{
     opacity: 1;
     background-image: url();
 }
-#species:hover{
+form div:hover{
     opacity: 1;
 }
-#species img{
+form div img{
     background-color: aliceblue;
     height: 8rem;
     width: 100%;
@@ -199,18 +207,27 @@ footer .rrss{
     border-radius: 2rem;
     transition: 1s;
 }
-#species p{
+form div p{
     width: 100%;
     text-align: center;
     margin: 0;
     padding: 0.5rem 0;
 }
-#species .latin{
+form div .latin{
     font-style: italic;
 }
-#species input{
+form div input{
     display: none;
 }
+
+.logg dialog{
+    width: 25rem;
+    flex-wrap: wrap ;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
 
 
 @media screen and (min-width: 900px) {

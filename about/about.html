@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animales</title>
+    <title>About us</title>
+    <meta name="description" content="Qué es y qué hace el proyecto Mendialdea, Cómo contactar con el proyecto Mendialdea, Cómo registrarse en el proyecto Mendialdea">
     <link rel="icon" type="image/x-icon" href="">
     <link rel="stylesheet" href="../assets/style.css">
     <link rel="stylesheet" href="about.css">
@@ -16,6 +17,7 @@
         </div>
         <img src="../assets/logo.png" alt="logo" class="logo">
         <nav>
+            <p id="date"></p>
             <a href="../animales/animales.html"><b>Animales</b></a>
             <a href="../plantas/plantas.html"><b>Plantas</b></a>
             <a href="about.html"><b>About</b></a>
@@ -32,19 +34,18 @@
             <input type="email" id="answer" name="answer" placeholder="e-mail">
             <label for="motive">Motivo del contacto:</label>
             <textarea name="motive" id="motive" maxlength="500" rows="3" required></textarea>
-            <label>Acepto las <a href="">políticas de privacidad</a> <input type="checkbox" name="acept" required></label>
+            <label>Acepto las <a href="">políticas de privacidad</a> <input type="checkbox" name="acept" id="acept" required></label>
            
-            <button type="submit">Enviar</button>
-            <button type="button">Encuesta voluntaria</button>
+            <button type="submit" id="send" disabled>Enviar</button>
+            <button type="button" id="more">Encuesta voluntaria</button>
         </form>
-        <form>
+        <form class="moreForm">
             <label for="variety">Variedad de especies en la aplicación</label>
-            1<input type="range" value="0" name="variety" id="variety" step="10" disabled>10
+            1<input type="range" value="0" name="variety" id="variety" step="10">10
             <label for="easy">Facilidad de uso de al aplicación</label>
-            1<input type="range" value="0" name="easy" id="easy" step="10" disabled>10
-            <button type="submit"></button>
+            1<input type="range" value="0" name="easy" id="easy" step="10">10
             <label for="publi">¿Cómo nos has conocido?</label>
-            <select name="publi" id="publi" disabled>
+            <select name="publi" id="publi">
                 <option value="">Elije Una</option>
                 <option>Navegando por la web</option>
                 <option>Por recomendación</option>
@@ -77,6 +78,22 @@
             <a href="https://es.pinterest.com/"><img src="../assets/pt.png" alt="Printerest"></a>
         </div>
     </footer>
-    
+
+    <script src="../assets/date.js"></script>
+    <script>
+        let send = document.getElementById('send')
+        let acept = document.getElementById('acept')
+
+        acept.addEventListener('change', function() {
+            send.disabled = !this.checked;
+        });
+
+        let more = document.getElementById('more')
+        let moreForm = document.querySelector('.moreForm')
+
+        more.addEventListener('click', ()=>{
+           moreForm.style.height = '0' ? '15rem' : '0';
+        })
+    </script>
 </body>
 </html>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mendialdea</title>
+    <meta name="description" content="Proyecto para amantes de la naturaleza, senderistas y mendizales que desean conocer más la biodiversidad local del Pais Vasco, animales vascos y plantas autóctonas vascas">
     <link rel="icon" type="image/x-icon" href="">
     <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -15,6 +16,7 @@
         </div>
         <img src="assets/logo.png" alt="logo" class="logo">
         <nav>
+            <p id="date"></p>
             <a href="animales/animales.html"><b>Animales</b></a>
             <a href="plantas/plantas.html"><b>Plantas</b></a>
             <a href="about/about.html"><b>About</b></a>
@@ -24,15 +26,24 @@
         <h2>¡A la Avenura!</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, cupiditate nostrum neque delectus excepturi laborum error aliquid nesciunt? Quaerat animi dolorum dolorem sed laboriosam earum harum expedita, impedit ipsum illum.</p>
         <div class="logg">
-            <form action="">
+            <dialog id="registry">
+                <form action="">
+                    <button type="reset" id="x" class="x">X</button>
+                    <label> Nuevo usuario <input type="text" name="newUser" id="newUser" max="8"></label>
+                    <label> Contraseña <input type="password" name="newPass" id="newPass" min="6"></label>
+                    <label>Repite contraseña <input type="password" name="doublePass" id="doublePass"></label>
+                    <button type="button" id="newLogg">Registrate</button>
+                </form>
+            </dialog>
+            <form action="" id="loggin">
                 <h3>Registrate ¡Es gratis!</h3>
                 <label for="user"></label>
                 <input type="text" id="user" name="user" placeholder="usuario">
                 <label for="password"></label>
                 <input type="password" id="password" name="password" placeholder="constraseña">
                 <img src="assets/eyeBan.png" alt="show password" id="eyeBan">
-                <button type="submit">Identificate</button>
-                <button type="button">Registrate</button>
+                <button type="button" id="submit">Identificate</button>
+                <button type="button" id="register" onclick="document.querySelector('#registry').showModal()">Registrate</button>
             </form>
         </div>
         <div class="us">
@@ -64,6 +75,7 @@
             <a href="https://es.pinterest.com/"><img src="assets/pt.png" alt="Printerest"></a>
         </div>
     </footer>
-    
+    <script src="assets/index.js"></script>
+    <script src="assets/date.js"></script>
 </body>
 </html>

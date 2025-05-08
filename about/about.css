@@ -22,3 +22,7 @@ form button[type="button"]{
 form select{
     margin: 0 40%;
 }
+.moreForm{
+    height: 0;
+    overflow: hidden;
+}
