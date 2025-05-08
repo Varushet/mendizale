@@ -40,31 +40,31 @@ newLogg.addEventListener('click', ()=>{
     let doublePass = document.getElementById('doublePass')
 
 
-if (!newUser.value || !/^[a-zA-Z]+$/.test(newUser.value) &&
-    !newPass.value || !/^[a-zA-Z]+$/.test(newPass.value)){
-    newUser.style.border = "1px solid red"
-    newPass.style.border = "1px solid red"
-} else{
-    newLogg.addEventListener('click', function(){
-    registry.close();
-    })
-}
-if (newPass !== doublePass){
-    newPass.style.border = "1px solid red"
-    doublePass.style.border = "1px solid red"
-}
-else{
-    newPass.style.border = ""
-    doublePass.style.border = ""
-}
+    if (!newUser.value || !/^[a-zA-Z]+$/.test(newUser.value) &&
+        !newPass.value || !/^[a-zA-Z0-9]+$/.test(newPass.value)){
+        newUser.style.border = "1px solid red"
+        newPass.style.border = "1px solid red"
+    } else{
+        if (newPass.value !== doublePass.value){
+            newPass.style.border = "1px solid red"
+            doublePass.style.border = "1px solid red"
+        } else{
+            newPass.style.border = ""
+            doublePass.style.border = ""
+        }
+        newUser.style.border = ""
+        newLogg.addEventListener('click', function(){
+            registry.close();
+        })
+    }
 })
 
 let eyeBan = document.getElementById('eyeBan')
 
 eyeBan.addEventListener('click', ()=>{
-if (passInput.type == 'password') {
-    passInput.type = 'text';
-} else {
-    passInput.type = 'password';
-}
+    if (passInput.type == 'password') {
+        passInput.type = 'text';
+    } else {
+        passInput.type = 'password';
+    }
 })
